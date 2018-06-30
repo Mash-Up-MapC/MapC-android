@@ -1,4 +1,4 @@
-package mashup.kr.mapc;
+package mashup.kr.mapc.ui.main.qnp;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,6 +13,10 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import mashup.kr.mapc.QnpItem;
+import mashup.kr.mapc.QnpRecyclerAdapter;
+import mashup.kr.mapc.R;
 
 public class QnpFragment extends Fragment {
 

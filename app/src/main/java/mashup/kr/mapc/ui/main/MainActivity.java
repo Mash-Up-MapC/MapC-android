@@ -1,5 +1,6 @@
-package mashup.kr.mapc;
+package mashup.kr.mapc.ui.main;
 
+import android.annotation.SuppressLint;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
@@ -11,6 +12,8 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import java.lang.reflect.Field;
+
+import mashup.kr.mapc.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -83,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
+    @SuppressLint("RestrictedApi")
     static void removeShiftMode(BottomNavigationView view) {
         BottomNavigationMenuView menuView = (BottomNavigationMenuView) view.getChildAt(0);
         try {

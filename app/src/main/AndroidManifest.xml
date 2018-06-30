@@ -19,7 +19,7 @@
                 android:resource="@xml/mapc_appwidget_info" />
         </receiver>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
