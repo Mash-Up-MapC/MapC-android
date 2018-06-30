@@ -70,6 +70,7 @@
         android:orientation="horizontal">
 
         <include
+            android:id="@+id/temperature"
             layout="@layout/view_weather_info_card" />
 
         <Space
@@ -77,6 +78,7 @@
             android:layout_height="wrap_content" />
 
         <include
+            android:id="@+id/humidity"
             layout="@layout/view_weather_info_card" />
 
         <Space
@@ -84,14 +86,16 @@
             android:layout_height="wrap_content" />
 
         <include
-            layout="@layout/view_weather_info_card"/>
+            android:id="@+id/wind"
+            layout="@layout/view_weather_info_card" />
 
         <Space
             android:layout_width="17dp"
             android:layout_height="wrap_content" />
 
         <include
-            layout="@layout/view_weather_info_card"/>
+            android:id="@+id/dust"
+            layout="@layout/view_weather_info_card" />
 
     </LinearLayout>
 

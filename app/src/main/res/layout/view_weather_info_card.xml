@@ -18,9 +18,11 @@
             android:orientation="vertical"
             app:layout_constraintDimensionRatio="1:1">
 
-            <ImageView android:layout_width="20dp"1
-            android:layout_height="20dp"
-            android:src="@drawable/icon_umbrella_black" />
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_umbrella_black" />
 
             <TextView
                 android:id="@+id/subtitle_1"
