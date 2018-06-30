@@ -5,4 +5,5 @@
     <color name="colorAccent">#F7CAC9</color>
     <color name="darkGray">#676767</color>
     <color name="lightGray">#d8d8d8</color>
+    <color name="tabDecorationColor">#FFFFFF</color>
 </resources>
