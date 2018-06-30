@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import mashup.kr.mapc.R;
+import mashup.kr.mapc.ui.main.home.view.WeatherSummaryView;
 
 public class HomeFragment extends Fragment {
 
@@ -24,7 +25,6 @@ public class HomeFragment extends Fragment {
     }
 
     public static HomeFragment newInstance() {
-
         Bundle args = new Bundle();
 
         HomeFragment fragment = new HomeFragment();
