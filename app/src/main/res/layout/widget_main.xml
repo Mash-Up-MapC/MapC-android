@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#fff">
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_weight="7"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:numColumns="3">
+    </GridView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="100dp">
+
+        <TextView
+            android:text="현재 온도"
+            android:textColor="#fff"
+            android:background="@color/colorBright"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/minimum_temp"
+                android:text="10"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:text="/"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/maximum_temp"
+                android:text="30"
+                android:textSize="30sp"
+                android:textColor="@color/colorBright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
