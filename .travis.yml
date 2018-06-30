@@ -16,3 +16,5 @@ before_install:
 skip_cleanup: true
 script:
 - ./gradlew clean build 
+notifications:
+   slack: mash-up-kr:knArKlSf68S6YuPOJpBnEq1z
