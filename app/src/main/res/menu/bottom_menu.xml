@@ -5,25 +5,25 @@
     <item
         android:id="@+id/menu_home"
         android:icon="@drawable/sunny"
-        android:title="1"
+        android:title="홈"
         />
 
     <item
         android:id="@+id/menu_qnp"
-        android:title="2"
         android:icon="@drawable/sunny"
+        android:title="Q &amp; P"
         />
 
     <item
         android:id="@+id/menu_magazine"
-        android:title="3"
         android:icon="@drawable/sunny"
+        android:title="매거진"
         />
 
     <item
         android:id="@+id/menu_mypage"
-        android:title="4"
         android:icon="@drawable/sunny"
+        android:title="내정보"
         />
 
 </menu>
