@@ -11,7 +11,7 @@
         android:id="@+id/gridview"
         android:layout_weight="7"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="match_parent"
         android:numColumns="3">
     </GridView>
 
@@ -19,12 +19,12 @@
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_weight="3"
-        android:layout_height="100dp">
+        android:layout_height="match_parent">
 
         <TextView
             android:text="현재 온도"
             android:textColor="#fff"
-            android:background="@color/colorBright"
+            android:background="@color/colorPrimaryDark"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:gravity="center"/>
@@ -52,7 +52,7 @@
                 android:id="@+id/maximum_temp"
                 android:text="30"
                 android:textSize="30sp"
-                android:textColor="@color/colorBright"
+                android:textColor="@color/colorPrimaryDark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"/>
