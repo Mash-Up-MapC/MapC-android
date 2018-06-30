@@ -1,4 +1,4 @@
-package mashup.kr.mapc;
+package mashup.kr.mapc.ui.main.home;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,12 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class QnpFragment extends Fragment {
+import mashup.kr.mapc.R;
+import mashup.kr.mapc.ui.main.home.view.WeatherSummaryView;
+
+public class HomeFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_qnp, container, false);
+        return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
     @Override
@@ -21,11 +24,10 @@ public class QnpFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    public static QnpFragment newInstance() {
-
+    public static HomeFragment newInstance() {
         Bundle args = new Bundle();
 
-        QnpFragment fragment = new QnpFragment();
+        HomeFragment fragment = new HomeFragment();
         fragment.setArguments(args);
         return fragment;
     }

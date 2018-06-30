@@ -1,4 +1,4 @@
-package mashup.kr.mapc;
+package mashup.kr.mapc.ui.main.mypage;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class MagazineFragment extends Fragment{
+import mashup.kr.mapc.R;
+
+public class MypageFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_magazine, container, false);
+        return inflater.inflate(R.layout.fragment_mypage, container, false);
     }
 
     @Override
@@ -21,11 +23,11 @@ public class MagazineFragment extends Fragment{
         super.onViewCreated(view, savedInstanceState);
     }
 
-    public static MagazineFragment newInstance() {
+    public static MypageFragment newInstance() {
 
         Bundle args = new Bundle();
 
-        MagazineFragment fragment = new MagazineFragment();
+        MypageFragment fragment = new MypageFragment();
         fragment.setArguments(args);
         return fragment;
     }

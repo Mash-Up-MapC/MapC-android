@@ -1,9 +1,11 @@
-package mashup.kr.mapc;
+package mashup.kr.mapc.ui.main;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import mashup.kr.mapc.R;
 
 public class MainActivity extends AppCompatActivity {
 
