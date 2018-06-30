@@ -19,14 +19,13 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="210dp"
-        android:layout_marginTop="20dp"
-        android:background="#d8d8d8">
+        android:layout_marginTop="20dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/icon_picture" />
+            android:src="@drawable/icon_dummy_fashion" />
 
     </FrameLayout>
 

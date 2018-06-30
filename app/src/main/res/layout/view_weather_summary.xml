@@ -1,106 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="21dp"
+    android:paddingEnd="23dp"
+    android:paddingStart="23dp"
+    android:paddingTop="27dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_horizontal"
+        android:text="24°"
+        android:textColor="#292929"
+        android:textSize="60sp"
+        android:textStyle="normal" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingBottom="21dp"
-        android:paddingEnd="23dp"
-        android:paddingStart="23dp"
-        android:paddingTop="27dp">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="12dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icon_sun_black" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="7dp"
             android:fontFamily="sans-serif-light"
             android:gravity="center_horizontal"
-            android:text="24°"
+            android:text="24° / 18°"
             android:textColor="#292929"
-            android:textSize="60sp"
+            android:textSize="18sp"
             android:textStyle="normal" />
 
-        <LinearLayout
+        <Space
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="12dp"
-            android:orientation="horizontal">
+            android:layout_weight="1" />
 
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/icon_sun_black" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icon_gps_black" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="7dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center_horizontal"
-                android:text="24° / 18°"
-                android:textColor="#292929"
-                android:textSize="18sp"
-                android:textStyle="normal" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/icon_gps_black" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:gravity="center_horizontal"
-                android:text="서울특별시 마포구"
-                android:textColor="#484848"
-                android:textSize="13sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="21dp"
-            android:orientation="horizontal">
+            android:layout_marginStart="2dp"
+            android:gravity="center_horizontal"
+            android:text="서울특별시 마포구"
+            android:textColor="#484848"
+            android:textSize="13sp" />
+    </LinearLayout>
 
-            <include
-                layout="@layout/view_weather_info_card"
-                app:title="@{`체감온도`}" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:orientation="horizontal">
 
-            <Space
-                android:layout_width="17dp"
-                android:layout_height="wrap_content" />
+        <include
+            android:id="@+id/temperature"
+            layout="@layout/view_weather_info_card" />
 
-            <include
-                layout="@layout/view_weather_info_card"
-                app:title="@{`습도`}" />
+        <Space
+            android:layout_width="17dp"
+            android:layout_height="wrap_content" />
 
-            <Space
-                android:layout_width="17dp"
-                android:layout_height="wrap_content" />
+        <include
+            android:id="@+id/humidity"
+            layout="@layout/view_weather_info_card" />
 
-            <include
-                layout="@layout/view_weather_info_card"
-                app:title="@{`바람세기`}" />
+        <Space
+            android:layout_width="17dp"
+            android:layout_height="wrap_content" />
 
-            <Space
-                android:layout_width="17dp"
-                android:layout_height="wrap_content" />
+        <include
+            android:id="@+id/wind"
+            layout="@layout/view_weather_info_card" />
 
-            <include
-                layout="@layout/view_weather_info_card"
-                app:title="@{`미세먼지`}" />
+        <Space
+            android:layout_width="17dp"
+            android:layout_height="wrap_content" />
 
-        </LinearLayout>
+        <include
+            android:id="@+id/dust"
+            layout="@layout/view_weather_info_card" />
 
     </LinearLayout>
 
-</layout>
+</LinearLayout>
+
