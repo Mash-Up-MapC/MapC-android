@@ -82,8 +82,7 @@ public class MapcWidgetProvider extends AppWidgetProvider{
     {
         Date now = new Date();
         RemoteViews updateViews = new RemoteViews(context.getPackageName(), R.layout.widget_main);
-        updateViews.setTextViewText(R.id.minimum_temp, Integer.toString(minTemp));
-        updateViews.setTextViewText(R.id.maximum_temp, Integer.toString(maxTemp));
+        //updateViews.setTextViewText(R.id.temp_space, Integer.toString(maxTemp)+ "° " +"/ "  +Integer.toString(minTemp)+ "°");
         appWidgetManager.updateAppWidget(appWidgetId, updateViews);
     }
 

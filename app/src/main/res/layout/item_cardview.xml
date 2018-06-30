@@ -68,7 +68,7 @@
             <TextView
                 android:text="versus1"
                 android:id="@+id/versus_1"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
@@ -81,7 +81,7 @@
             <TextView
                 android:text="versus2"
                 android:id="@+id/versus_2"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
