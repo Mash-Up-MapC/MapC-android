@@ -1,13 +1,22 @@
 package mashup.kr.mapc;
 
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter{
 
+    private String[] tabTitles = new String[] {"홈", "큐앤픽", "오늘의 패션"};
+
     public ViewPagerAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
+    }
+
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return tabTitles[position];
     }
 
     @Override
@@ -19,8 +28,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
                 return QnpFragment.newInstance();
             case 2:
                 return MagazineFragment.newInstance();
-            case 3:
-                return MypageFragment.newInstance();
         }
 
         return null;
@@ -28,6 +35,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public int getCount() {
-        return 4;
+        return 3;
     }
 }
