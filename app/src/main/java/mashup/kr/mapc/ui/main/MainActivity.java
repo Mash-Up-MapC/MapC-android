@@ -1,4 +1,4 @@
-package mashup.kr.mapc;
+package mashup.kr.mapc.ui.main;
 
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
@@ -11,6 +11,8 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import java.lang.reflect.Field;
+
+import mashup.kr.mapc.R;
 
 public class MainActivity extends AppCompatActivity {
 
