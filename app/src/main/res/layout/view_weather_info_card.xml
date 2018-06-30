@@ -62,9 +62,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="4dp"
             android:gravity="center_horizontal"
-            android:text="@{title}"
             android:textColor="#292929"
-            tools:text="체감온도"
+            android:text="체감온도"
             android:textSize="11sp" />
 
     </LinearLayout>
