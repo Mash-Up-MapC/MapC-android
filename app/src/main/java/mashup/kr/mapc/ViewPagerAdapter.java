@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter{
 
-    private String[] tabTitles = new String[] {"홈", "큐앤픽", "오늘의 패션"};
+    private String[] tabTitles = new String[] {"홈", "큐앤픽", "오늘의 패션", "내 정보"};
 
     public ViewPagerAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
@@ -28,6 +28,8 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
                 return QnpFragment.newInstance();
             case 2:
                 return MagazineFragment.newInstance();
+            case 3:
+                return MypageFragment.newInstance();
         }
 
         return null;
@@ -35,6 +37,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 }
