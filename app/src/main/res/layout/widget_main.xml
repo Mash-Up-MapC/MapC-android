@@ -5,33 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:background="@color/colorPrimary">
-
+    android:background="@color/colorPrimaryDark">
     <LinearLayout
+        android:orientation="vertical"
         android:layout_weight="6"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:background="@drawable/fill_1">
-        </ImageView>
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:background="@drawable/fill_2">
-        </ImageView>
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:background="@drawable/fill_3">
-        </ImageView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/fill_1">
+            </ImageView>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/fill_2">
+            </ImageView>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/fill_3">
+            </ImageView>
+
+        </LinearLayout>
+        <TextView
+            android:text="오늘 낮에는 덥고 찜찜하지만"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:text="저녁엔 쌀쌀하니 겉옷을 챙기세요!"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
+
 
     <LinearLayout
         android:orientation="vertical"

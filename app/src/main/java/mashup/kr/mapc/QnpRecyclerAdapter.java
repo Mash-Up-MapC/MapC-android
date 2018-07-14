@@ -92,7 +92,7 @@ public class QnpRecyclerAdapter extends RecyclerView.Adapter<QnpRecyclerAdapter.
                 entries.add(new PieEntry(qnpItem.getV1_ratio(), holder.versus1.getText()));
                 entries.add(new PieEntry(qnpItem.getV2_ratio(), holder.versus2.getText()));
 
-                PieDataSet set = new PieDataSet(entries,null);
+                PieDataSet set = new PieDataSet(entries,"");
 
                 PieData data = new PieData(set);
                 holder.pieChart.setData(data);
@@ -115,7 +115,7 @@ public class QnpRecyclerAdapter extends RecyclerView.Adapter<QnpRecyclerAdapter.
                 entries.add(new PieEntry(qnpItem.getV1_ratio(), holder.versus1.getText()));
                 entries.add(new PieEntry(qnpItem.getV2_ratio(), holder.versus2.getText()));
 
-                PieDataSet set = new PieDataSet(entries,null);
+                PieDataSet set = new PieDataSet(entries,"");
                 PieData data = new PieData(set);
                 holder.pieChart.setData(data);
 
