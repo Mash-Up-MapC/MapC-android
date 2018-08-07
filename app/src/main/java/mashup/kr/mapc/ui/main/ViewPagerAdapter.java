@@ -5,14 +5,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import mashup.kr.mapc.ui.main.home.HomeFragment;
-import mashup.kr.mapc.ui.main.magazine.MagazineFragment;
-import mashup.kr.mapc.ui.main.mypage.MypageFragment;
-import mashup.kr.mapc.ui.main.qnp.QnpFragment;
+import mashup.kr.mapc.ui.main.course.CourseFragment;
+import mashup.kr.mapc.ui.main.booking.BookingFragment;
+import mashup.kr.mapc.ui.main.guide.GuideFragment;
+import mashup.kr.mapc.ui.main.etc.EtcFragment;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter{
 
-    private String[] tabTitles = new String[] {"홈", "큐앤픽", "오늘의 패션", "내 정보"};
+    private String[] tabTitles = new String[] {"코스", "예약", "가이드", "기타"};
 
     public ViewPagerAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
@@ -28,13 +28,13 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return HomeFragment.newInstance();
+                return CourseFragment.newInstance();
             case 1:
-                return QnpFragment.newInstance();
+                return BookingFragment.newInstance();
             case 2:
-                return MagazineFragment.newInstance();
+                return GuideFragment.newInstance();
             case 3:
-                return MypageFragment.newInstance();
+                return EtcFragment.newInstance();
         }
 
         return null;

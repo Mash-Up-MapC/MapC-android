@@ -1,4 +1,4 @@
-package mashup.kr.mapc.ui.main.mypage;
+package mashup.kr.mapc.ui.main.booking;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,12 +10,12 @@ import android.view.ViewGroup;
 
 import mashup.kr.mapc.R;
 
-public class MypageFragment extends Fragment {
+public class BookingFragment extends Fragment{
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_mypage, container, false);
+        return inflater.inflate(R.layout.fragment_booking, container, false);
     }
 
     @Override
@@ -23,11 +23,11 @@ public class MypageFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    public static MypageFragment newInstance() {
+    public static BookingFragment newInstance() {
 
         Bundle args = new Bundle();
 
-        MypageFragment fragment = new MypageFragment();
+        BookingFragment fragment = new BookingFragment();
         fragment.setArguments(args);
         return fragment;
     }

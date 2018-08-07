@@ -1,4 +1,4 @@
-package mashup.kr.mapc.ui.main.home;
+package mashup.kr.mapc.ui.main.course;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,14 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import mashup.kr.mapc.R;
-import mashup.kr.mapc.ui.main.home.view.WeatherSummaryView;
 
-public class HomeFragment extends Fragment {
+public class CourseFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return inflater.inflate(R.layout.fragment_course, container, false);
     }
 
     @Override
@@ -24,10 +23,10 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    public static HomeFragment newInstance() {
+    public static CourseFragment newInstance() {
         Bundle args = new Bundle();
 
-        HomeFragment fragment = new HomeFragment();
+        CourseFragment fragment = new CourseFragment();
         fragment.setArguments(args);
         return fragment;
     }
