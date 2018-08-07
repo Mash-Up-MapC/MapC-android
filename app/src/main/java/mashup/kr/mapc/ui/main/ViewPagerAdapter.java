@@ -12,7 +12,7 @@ import mashup.kr.mapc.ui.main.etc.EtcFragment;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter{
 
-    private String[] tabTitles = new String[] {"홈", "큐앤픽", "오늘의 패션", "내 정보"};
+    private String[] tabTitles = new String[] {"코스", "예약", "가이드", "기타"};
 
     public ViewPagerAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
@@ -30,11 +30,11 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
             case 0:
                 return CourseFragment.newInstance();
             case 1:
-                return EtcFragment.newInstance();
-            case 2:
                 return BookingFragment.newInstance();
-            case 3:
+            case 2:
                 return GuideFragment.newInstance();
+            case 3:
+                return EtcFragment.newInstance();
         }
 
         return null;
