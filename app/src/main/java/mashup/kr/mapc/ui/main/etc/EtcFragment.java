@@ -1,4 +1,4 @@
-package mashup.kr.mapc.ui.main.qnp;
+package mashup.kr.mapc.ui.main.etc;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,12 +10,12 @@ import android.view.ViewGroup;
 
 import mashup.kr.mapc.R;
 
-public class QnpFragment extends Fragment {
+public class EtcFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_qnp, container, false);
+        return inflater.inflate(R.layout.fragment_etc, container, false);
     }
 
     @Override
@@ -23,11 +23,11 @@ public class QnpFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    public static QnpFragment newInstance() {
+    public static EtcFragment newInstance() {
 
         Bundle args = new Bundle();
 
-        QnpFragment fragment = new QnpFragment();
+        EtcFragment fragment = new EtcFragment();
         fragment.setArguments(args);
         return fragment;
     }
