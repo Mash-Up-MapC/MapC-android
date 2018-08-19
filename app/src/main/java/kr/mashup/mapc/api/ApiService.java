@@ -1,4 +1,4 @@
-package mashup.kr.mapc.api;
+package kr.mashup.mapc.api;
 
 import retrofit2.Response;
 import retrofit2.http.GET;

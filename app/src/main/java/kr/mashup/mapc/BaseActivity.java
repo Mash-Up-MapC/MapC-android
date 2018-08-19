@@ -1,4 +1,4 @@
-package mashup.kr.mapc;
+package kr.mashup.mapc;
 
 import android.app.Application;
 import android.appwidget.AppWidgetProvider;

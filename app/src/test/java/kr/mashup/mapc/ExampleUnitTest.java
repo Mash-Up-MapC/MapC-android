@@ -1,4 +1,4 @@
-package mashup.kr.mapc;
+package kr.mashup.mapc;
 
 import org.junit.Test;
 

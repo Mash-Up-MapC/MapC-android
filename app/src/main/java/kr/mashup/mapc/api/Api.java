@@ -1,4 +1,4 @@
-package mashup.kr.mapc.api;
+package kr.mashup.mapc.api;
 
 import com.google.gson.Gson;
 

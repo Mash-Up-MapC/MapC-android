@@ -1,4 +1,4 @@
-package mashup.kr.mapc;
+package kr.mashup.mapc;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
