@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public final class Api {
@@ -19,6 +20,7 @@ public final class Api {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(SERVER_URL)
                     .addConverterFactory(GsonConverterFactory.create(new Gson()))
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .client(builder.build())
                     .build();
 
