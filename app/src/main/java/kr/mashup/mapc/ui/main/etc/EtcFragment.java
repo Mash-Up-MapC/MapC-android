@@ -1,4 +1,4 @@
-package mashup.kr.mapc.ui.main.course;
+package kr.mashup.mapc.ui.main.etc;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,14 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import mashup.kr.mapc.R;
+import kr.mashup.mapc.R;
 
-public class CourseFragment extends Fragment {
+public class EtcFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_course, container, false);
+        return inflater.inflate(R.layout.fragment_etc, container, false);
     }
 
     @Override
@@ -23,10 +23,11 @@ public class CourseFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    public static CourseFragment newInstance() {
+    public static EtcFragment newInstance() {
+
         Bundle args = new Bundle();
 
-        CourseFragment fragment = new CourseFragment();
+        EtcFragment fragment = new EtcFragment();
         fragment.setArguments(args);
         return fragment;
     }

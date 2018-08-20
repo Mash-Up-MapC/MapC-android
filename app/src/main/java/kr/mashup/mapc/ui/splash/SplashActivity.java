@@ -1,4 +1,4 @@
-package mashup.kr.mapc.ui.splash;
+package kr.mashup.mapc.ui.splash;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Completable;
 import io.reactivex.functions.Action;
-import mashup.kr.mapc.R;
-import mashup.kr.mapc.ui.main.MainActivity;
+import kr.mashup.mapc.R;
+import kr.mashup.mapc.ui.main.MainActivity;
 
 public class SplashActivity extends AppCompatActivity {
 

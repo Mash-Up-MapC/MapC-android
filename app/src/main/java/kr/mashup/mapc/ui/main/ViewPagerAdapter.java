@@ -1,14 +1,14 @@
-package mashup.kr.mapc.ui.main;
+package kr.mashup.mapc.ui.main;
 
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import mashup.kr.mapc.ui.main.course.CourseFragment;
-import mashup.kr.mapc.ui.main.booking.BookingFragment;
-import mashup.kr.mapc.ui.main.guide.GuideFragment;
-import mashup.kr.mapc.ui.main.etc.EtcFragment;
+import kr.mashup.mapc.ui.main.course.CourseFragment;
+import kr.mashup.mapc.ui.main.booking.BookingFragment;
+import kr.mashup.mapc.ui.main.guide.GuideFragment;
+import kr.mashup.mapc.ui.main.etc.EtcFragment;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter{
 
