@@ -12,21 +12,16 @@ import kr.mashup.mapc.R;
 
 public class CourseFragment extends Fragment {
 
+    @Nullable
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (savedInstanceState == null) {
             CourseMapFragment courseMapFragment = new CourseMapFragment();
             getFragmentManager().beginTransaction()
                     .replace(R.id.course_map_container, courseMapFragment)
                     .commit();
         }
-    }
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_course, container, false);
     }
 
