@@ -12,6 +12,18 @@ import kr.mashup.mapc.R;
 
 public class CourseFragment extends Fragment {
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        if (savedInstanceState == null) {
+            CourseMapFragment courseMapFragment = new CourseMapFragment();
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.course_map_container, courseMapFragment)
+                    .commit();
+        }
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
