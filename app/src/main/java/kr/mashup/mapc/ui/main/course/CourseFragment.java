@@ -15,6 +15,13 @@ public class CourseFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        if (savedInstanceState == null) {
+            CourseMapFragment courseMapFragment = CourseMapFragment.newInstance();
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.course_map_container, courseMapFragment)
+                    .commit();
+        }
+
         return inflater.inflate(R.layout.fragment_course, container, false);
     }
 

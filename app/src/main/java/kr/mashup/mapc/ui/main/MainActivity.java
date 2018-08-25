@@ -10,6 +10,7 @@ import kr.mashup.mapc.R;
 public class MainActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
+    private static final int PAGER_SCREEN_OFFSET_LIMIT = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         final TabLayout tabLayout = findViewById(R.id.tab_layout);
 
         viewPager = findViewById(R.id.view_pager);
+        viewPager.setOffscreenPageLimit(PAGER_SCREEN_OFFSET_LIMIT);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(viewPagerAdapter);
 
