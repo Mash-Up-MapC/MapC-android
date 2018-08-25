@@ -20,10 +20,6 @@ public class CourseMapFragment extends Fragment implements OnMapReadyCallback {
     private View view;
     private MapView mapView;
 
-    public CourseMapFragment() {
-
-    }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -57,5 +53,13 @@ public class CourseMapFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         MapsInitializer.initialize(this.getActivity());
+    }
+
+    public static CourseMapFragment newInstance() {
+        Bundle args = new Bundle();
+
+        CourseMapFragment fragment = new CourseMapFragment();
+        fragment.setArguments(args);
+        return fragment;
     }
 }
