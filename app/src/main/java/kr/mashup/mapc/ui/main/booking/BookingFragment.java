@@ -32,7 +32,7 @@ public class BookingFragment extends Fragment{
     }
 
     private void init(View view) {
-        recyclerView = view.findViewById(R.id.recycler_view);
+        recyclerView = view.findViewById(R.id.recycler_view_booking);
 
         adapter = new BookingAdapter();
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
