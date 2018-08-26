@@ -28,4 +28,9 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingViewHolder> {
         return dataList.size();
     }
 
+    public void addData(Booking booking) {
+        dataList.add(booking);
+        notifyItemInserted(dataList.size());
+    }
+
 }

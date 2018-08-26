@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import kr.mashup.mapc.R;
+import kr.mashup.mapc.data.Booking;
 
 public class BookingFragment extends Fragment{
 
@@ -36,6 +37,10 @@ public class BookingFragment extends Fragment{
         adapter = new BookingAdapter();
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
+
+        for (int i = 0; i < 10; i++) {
+            adapter.addData(new Booking());
+        }
     }
 
     public static BookingFragment newInstance() {
