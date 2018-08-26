@@ -6,4 +6,16 @@
     <color name="darkGray">#676767</color>
     <color name="lightGray">#d8d8d8</color>
     <color name="tabDecorationColor">#FFFFFF</color>
+    <color name="salmon">#fd7674</color>
+    <color name="greyish_brown">#595959</color>
+    <color name="white">#ffffff</color>
+    <color name="white_43">#6edcdcdc</color>
+    <color name="white_two">#f6f6f6</color>
+    <color name="cocoa">#603737</color>
+    <color name="black">#000000</color>
+    <color name="salmon_5">#0cfd7674</color>
+    <color name="reddish_grey">#a26868</color>
+    <color name="dodger_blue">#528aff</color>
+    <color name="boring_green">#5cb760</color>
+    <color name="light_gold">#ffc94f</color>
 </resources>
