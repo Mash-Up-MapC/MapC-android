@@ -6,6 +6,10 @@
 *.apk
 *.ap_
 
+# Key file
+google-services.json
+keys.xml
+
 # Files for the ART/Dalvik VM
 *.dex
 
