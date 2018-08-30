@@ -31,8 +31,10 @@ public class BusView extends View {
     private Bitmap imageBusBottom;
 
     private static final int BACKGROUND_MOVE_SPEED = 5;
+    private static final int CLOUD_MOVE_SPEED = 2;
 
     private int backgroundPosX = 0;
+    private int cloudPosX = 0;
 
     public BusView(Context context) {
         super(context);
@@ -75,10 +77,15 @@ public class BusView extends View {
         super.onDraw(canvas);
         canvas.scale(viewScale, viewScale);
 
-        drawBackground(canvas);
+        drawViews(canvas);
 
         logFrame();
         invalidate();
+    }
+
+    private void drawViews(Canvas canvas) {
+        drawBackground(canvas);
+        drawCloud(canvas);
     }
 
     private void drawBackground(Canvas canvas) {
@@ -87,6 +94,13 @@ public class BusView extends View {
         draw(canvas, imageBackground, backgroundPosX, 0);
         draw(canvas, imageBackground, backgroundPosX + imageBackground.getWidth(), 0);
         draw(canvas, imageBackground, backgroundPosX - imageBackground.getWidth(), 0);
+    }
+
+    private void drawCloud(Canvas canvas) {
+        cloudPosX += CLOUD_MOVE_SPEED;
+        cloudPosX %= (imageBackground.getWidth() + imageCloud.getWidth());
+
+        draw(canvas, imageCloud, cloudPosX - imageCloud.getWidth(), 0);
     }
 
     private void draw(Canvas canvas, Bitmap bitmap, int posX, int posY) {
