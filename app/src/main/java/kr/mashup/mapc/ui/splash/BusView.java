@@ -4,14 +4,21 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import kr.mashup.mapc.R;
 
 public class BusView extends View {
+
+    private int viewWidth;
+    private int viewHeight;
+    private float viewScale;
 
     private Bitmap imageBackground;
     private Bitmap imageCloud;
@@ -43,6 +50,15 @@ public class BusView extends View {
 
     private Bitmap decodeResource(@DrawableRes int drawableId) {
         return BitmapFactory.decodeResource(getResources(), drawableId);
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+        viewWidth = getMeasuredWidth();
+        viewHeight = getMeasuredHeight();
+
+        viewScale = (float) viewWidth / imageBackground.getWidth();
     }
 
     @Override
