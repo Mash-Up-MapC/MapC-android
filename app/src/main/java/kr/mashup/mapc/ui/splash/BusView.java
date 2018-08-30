@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Matrix;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.support.annotation.DrawableRes;
@@ -32,6 +33,7 @@ public class BusView extends View {
     private Bitmap imageCloud;
     private Bitmap imageBusTop;
     private Bitmap imageBusBottom;
+    private Bitmap imageBusWheel;
 
     private static final int BACKGROUND_MOVE_SPEED = 5;
     private static final int CLOUD_MOVE_SPEED = 2;
@@ -41,11 +43,13 @@ public class BusView extends View {
     private static final int BUS_TOP_ANIMATION_DURATION = 400;
     private static final int[] BUS_ANIMATION_PATTERN = {0, 2, -7, 0};
     private static final int[] BUS_TOP_ANIMATION_PATTERN = {0, 2, -7, -20, 0};
+    private static final int BUS_WHEEL_SPEED = 7;
 
     private int backgroundPosX = 0;
     private int cloudPosX = 0;
     private int busPosY = 0;
     private int busTopPosY = 0;
+    private int wheelAngle = 0;
 
     private long busAnimationCount = 0;
 
@@ -70,6 +74,7 @@ public class BusView extends View {
         imageCloud = decodeResource(R.drawable.img_splash_cloud);
         imageBusTop = decodeResource(R.drawable.img_splash_bus_top);
         imageBusBottom = decodeResource(R.drawable.img_splash_bus_bottom);
+        imageBusWheel = decodeResource(R.drawable.img_splash_bus_wheel);
     }
 
     private Bitmap decodeResource(@DrawableRes int drawableId) {
@@ -121,6 +126,8 @@ public class BusView extends View {
     private void drawBus(Canvas canvas) {
         draw(canvas, imageBusTop, 187, 247 + busPosY + busTopPosY);
         draw(canvas, imageBusBottom, 100, 350 + busPosY);
+        draw(canvas, imageBusWheel, 217, 517 + busPosY, wheelAngle);
+        draw(canvas, imageBusWheel, 459, 517 + busPosY, wheelAngle);
     }
 
     private void animateBackground() {
@@ -151,6 +158,8 @@ public class BusView extends View {
                     .onUpdate(value -> busTopPosY = value)
                     .start();
         }
+        wheelAngle += BUS_WHEEL_SPEED;
+        wheelAngle %= 360;
     }
 
     private void draw(Canvas canvas, Bitmap bitmap, int posX, int posY) {
@@ -164,6 +173,18 @@ public class BusView extends View {
                 new RectF(posX, posY, posX + bitmap.getWidth(), posY + bitmap.getHeight()),
                 null
         );
+    }
+
+    private void draw(Canvas canvas, Bitmap bitmap, int posX, int posY, float angle) {
+        Matrix drawMatrix = new Matrix();
+        drawMatrix.setRotate(
+                -angle,
+                bitmap.getWidth() / 2,
+                bitmap.getHeight() / 2
+        );
+        drawMatrix.postTranslate(posX, posY);
+
+        canvas.drawBitmap(bitmap, drawMatrix, null);
     }
 
     private void logFrame() {
