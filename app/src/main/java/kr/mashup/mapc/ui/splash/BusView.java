@@ -86,6 +86,7 @@ public class BusView extends View {
     private void drawViews(Canvas canvas) {
         drawBackground(canvas);
         drawCloud(canvas);
+        drawBus(canvas);
     }
 
     private void drawBackground(Canvas canvas) {
@@ -101,6 +102,11 @@ public class BusView extends View {
         cloudPosX %= (imageBackground.getWidth() + imageCloud.getWidth());
 
         draw(canvas, imageCloud, cloudPosX - imageCloud.getWidth(), 0);
+    }
+
+    private void drawBus(Canvas canvas) {
+        draw(canvas, imageBusTop, 187, 247);
+        draw(canvas, imageBusBottom, 100, 350);
     }
 
     private void draw(Canvas canvas, Bitmap bitmap, int posX, int posY) {
