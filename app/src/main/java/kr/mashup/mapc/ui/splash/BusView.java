@@ -25,6 +25,10 @@ public class BusView extends View {
     private Bitmap imageBusTop;
     private Bitmap imageBusBottom;
 
+    private static final int BACKGROUND_MOVE_SPEED = 5;
+
+    private int backgroundPosX = 0;
+
     public BusView(Context context) {
         super(context);
 
@@ -66,7 +70,17 @@ public class BusView extends View {
         super.onDraw(canvas);
         canvas.scale(viewScale, viewScale);
 
-        draw(canvas, imageBackground, 0, 0);
+        drawBackground(canvas);
+
+        invalidate();
+    }
+
+    private void drawBackground(Canvas canvas) {
+        backgroundPosX += BACKGROUND_MOVE_SPEED;
+        backgroundPosX %= imageBackground.getWidth();
+        draw(canvas, imageBackground, backgroundPosX, 0);
+        draw(canvas, imageBackground, backgroundPosX + imageBackground.getWidth(), 0);
+        draw(canvas, imageBackground, backgroundPosX - imageBackground.getWidth(), 0);
     }
 
     private void draw(Canvas canvas, Bitmap bitmap, int posX, int posY) {
