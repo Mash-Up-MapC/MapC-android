@@ -64,5 +64,22 @@ public class BusView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        canvas.scale(viewScale, viewScale);
+
+        draw(canvas, imageBackground, 0, 0);
     }
+
+    private void draw(Canvas canvas, Bitmap bitmap, int posX, int posY) {
+        draw(canvas, bitmap, (float) posX, (float) posY);
+    }
+
+    private void draw(Canvas canvas, Bitmap bitmap, float posX, float posY) {
+        canvas.drawBitmap(
+                bitmap,
+                new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight()),
+                new RectF(posX, posY, posX + bitmap.getWidth(), posY + bitmap.getHeight()),
+                null
+        );
+    }
+
 }
