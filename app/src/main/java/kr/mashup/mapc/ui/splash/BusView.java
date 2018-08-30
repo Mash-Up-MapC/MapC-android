@@ -104,27 +104,31 @@ public class BusView extends View {
     }
 
     private void animateViews() {
+        animateBackground();
         animateBus();
     }
 
     private void drawBackground(Canvas canvas) {
-        backgroundPosX += BACKGROUND_MOVE_SPEED;
-        backgroundPosX %= imageBackground.getWidth();
         draw(canvas, imageBackground, backgroundPosX, 0);
         draw(canvas, imageBackground, backgroundPosX + imageBackground.getWidth(), 0);
         draw(canvas, imageBackground, backgroundPosX - imageBackground.getWidth(), 0);
     }
 
     private void drawCloud(Canvas canvas) {
-        cloudPosX += CLOUD_MOVE_SPEED;
-        cloudPosX %= (imageBackground.getWidth() + imageCloud.getWidth());
-
         draw(canvas, imageCloud, cloudPosX - imageCloud.getWidth(), 0);
     }
 
     private void drawBus(Canvas canvas) {
         draw(canvas, imageBusTop, 187, 247 + busPosY + busTopPosY);
         draw(canvas, imageBusBottom, 100, 350 + busPosY);
+    }
+
+    private void animateBackground() {
+        backgroundPosX += BACKGROUND_MOVE_SPEED;
+        backgroundPosX %= imageBackground.getWidth();
+
+        cloudPosX += CLOUD_MOVE_SPEED;
+        cloudPosX %= (imageBackground.getWidth() + imageCloud.getWidth());
     }
 
     private void animateBus() {
