@@ -16,9 +16,14 @@ import kr.mashup.mapc.R;
 
 public class BusView extends View {
 
+    private static final String TAG = BusView.class.getSimpleName();
+
     private int viewWidth;
     private int viewHeight;
     private float viewScale;
+
+    private long lastMeasureTime = System.currentTimeMillis();
+    private long frameCount = 0;
 
     private Bitmap imageBackground;
     private Bitmap imageCloud;
@@ -72,6 +77,7 @@ public class BusView extends View {
 
         drawBackground(canvas);
 
+        logFrame();
         invalidate();
     }
 
@@ -94,6 +100,21 @@ public class BusView extends View {
                 new RectF(posX, posY, posX + bitmap.getWidth(), posY + bitmap.getHeight()),
                 null
         );
+    }
+
+    private void logFrame() {
+        frameCount++;
+
+        long currentTime = System.currentTimeMillis();
+
+        if (currentTime > lastMeasureTime + 1000) {
+            long timeDiff = currentTime - lastMeasureTime;
+            float framePerSecond = (float) frameCount / (timeDiff / 1000);
+            Log.d(TAG, "avg frame per second : " + framePerSecond);
+
+            lastMeasureTime = currentTime;
+            frameCount = 0;
+        }
     }
 
 }
