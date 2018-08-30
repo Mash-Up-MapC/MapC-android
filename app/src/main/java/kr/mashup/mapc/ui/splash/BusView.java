@@ -11,6 +11,9 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.LinearInterpolator;
+
+import net.jspiner.animation.AnimationBuilder;
 
 import kr.mashup.mapc.R;
 
@@ -32,9 +35,19 @@ public class BusView extends View {
 
     private static final int BACKGROUND_MOVE_SPEED = 5;
     private static final int CLOUD_MOVE_SPEED = 2;
+    private static final int BUS_ANIMATION_CYCLE = 180;
+    private static final int BUS_BOTTOM_ANIMATION_CYCLE = 45;
+    private static final int BUS_ANIMATION_DURATION = 300;
+    private static final int BUS_TOP_ANIMATION_DURATION = 400;
+    private static final int[] BUS_ANIMATION_PATTERN = {0, 2, -7, 0};
+    private static final int[] BUS_TOP_ANIMATION_PATTERN = {0, 2, -7, -20, 0};
 
     private int backgroundPosX = 0;
     private int cloudPosX = 0;
+    private int busPosY = 0;
+    private int busTopPosY = 0;
+
+    private long busAnimationCount = 0;
 
     public BusView(Context context) {
         super(context);
@@ -78,6 +91,7 @@ public class BusView extends View {
         canvas.scale(viewScale, viewScale);
 
         drawViews(canvas);
+        animateViews();
 
         logFrame();
         invalidate();
@@ -87,6 +101,10 @@ public class BusView extends View {
         drawBackground(canvas);
         drawCloud(canvas);
         drawBus(canvas);
+    }
+
+    private void animateViews() {
+        animateBus();
     }
 
     private void drawBackground(Canvas canvas) {
@@ -105,8 +123,30 @@ public class BusView extends View {
     }
 
     private void drawBus(Canvas canvas) {
-        draw(canvas, imageBusTop, 187, 247);
-        draw(canvas, imageBusBottom, 100, 350);
+        draw(canvas, imageBusTop, 187, 247 + busPosY + busTopPosY);
+        draw(canvas, imageBusBottom, 100, 350 + busPosY);
+    }
+
+    private void animateBus() {
+        busAnimationCount++;
+        busAnimationCount %= BUS_ANIMATION_CYCLE;
+        if (busAnimationCount % BUS_BOTTOM_ANIMATION_CYCLE == 0) {
+            AnimationBuilder.builder()
+                    .valueAnimator(BUS_ANIMATION_PATTERN)
+                    .duration(BUS_ANIMATION_DURATION)
+                    .interpolator(new LinearInterpolator())
+                    .onUpdate(value -> busPosY = value)
+                    .start();
+        }
+
+        if (busAnimationCount % BUS_ANIMATION_CYCLE == 0) {
+            AnimationBuilder.builder()
+                    .valueAnimator(BUS_TOP_ANIMATION_PATTERN)
+                    .duration(BUS_TOP_ANIMATION_DURATION)
+                    .interpolator(new LinearInterpolator())
+                    .onUpdate(value -> busTopPosY = value)
+                    .start();
+        }
     }
 
     private void draw(Canvas canvas, Bitmap bitmap, int posX, int posY) {
