@@ -12,8 +12,6 @@ import android.widget.TextView;
 import kr.mashup.mapc.R;
 import kr.mashup.mapc.ui.base.BaseActivity;
 
-tivity;
-
 public class MainActivity extends BaseActivity {
 
     private ViewPager viewPager;
