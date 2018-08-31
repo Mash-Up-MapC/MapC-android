@@ -171,6 +171,8 @@ public class BusView extends View {
     }
 
     private void draw(Canvas canvas, Bitmap bitmap, float posX, float posY, float angle) {
+        posX = scaleDpi(posX);
+        posY = scaleDpi(posY);
         Matrix drawMatrix = new Matrix();
         drawMatrix.setRotate(
                 -angle,
@@ -180,6 +182,11 @@ public class BusView extends View {
         drawMatrix.postTranslate(posX, posY);
 
         canvas.drawBitmap(bitmap, drawMatrix, null);
+    }
+
+    private float scaleDpi(float position) {
+        float density = getResources().getDisplayMetrics().density;
+        return position * (density / 2.0f);
     }
 
     private void logFrame() {
