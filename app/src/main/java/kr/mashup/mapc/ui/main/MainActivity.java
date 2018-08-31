@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.tab_layout);
 
         tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setSelectedTabIndicatorHeight(0);
 
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
             View tabView = LayoutInflater.from(this).inflate(R.layout.item_main_tab, null, false);
