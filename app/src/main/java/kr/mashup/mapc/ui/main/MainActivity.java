@@ -28,7 +28,5 @@ public class MainActivity extends BaseActivity {
         viewPager.setAdapter(viewPagerAdapter);
 
         tabLayout.setupWithViewPager(viewPager);
-
-        getSupportActionBar().setElevation(0);
     }
 }
