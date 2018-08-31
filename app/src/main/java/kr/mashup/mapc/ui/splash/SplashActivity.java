@@ -30,12 +30,7 @@ public class SplashActivity extends BaseActivity {
 
     private void init() {
         Completable.timer(SPLASH_DELAY, TimeUnit.MILLISECONDS)
-                .subscribe(new Action() {
-                    @Override
-                    public void run() throws Exception {
-                       // startMainActivity();
-                    }
-                });
+                .subscribe(this::startMainActivity);
     }
 
     private void startMainActivity() {
