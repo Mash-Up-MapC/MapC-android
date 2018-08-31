@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:id="@+id/relative_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.main.course.CourseFragment">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="My Page Fragment" />
-
-</FrameLayout>
+        <kr.mashup.mapc.ui.splash.BusView
+            android:id="@+id/bus_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_alignBottom="@+id/bus_view"
+            android:layout_marginStart="26dp"
+            android:layout_marginBottom="124dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/introduce_guide"
+            android:textSize="13sp"
+            android:textColor="@color/greyish_brown" />
+        <TextView
+            android:layout_alignBottom="@+id/bus_view"
+            android:layout_marginStart="26dp"
+            android:layout_marginBottom="86dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Audio Guide"
+            android:textSize="24sp"
+            android:textColor="@color/cocoa" />
+        <Button
+            android:id="@+id/guide_start_btn"
+            android:layout_alignBottom="@+id/bus_view"
+            android:text="@string/start_guide"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:background="@color/salmon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+</RelativeLayout>
