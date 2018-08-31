@@ -1,13 +1,13 @@
 package kr.mashup.mapc.ui.main;
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import kr.mashup.mapc.R;
+import kr.mashup.mapc.ui.base.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private ViewPager viewPager;
     private static final int PAGER_SCREEN_OFFSET_LIMIT = 3;

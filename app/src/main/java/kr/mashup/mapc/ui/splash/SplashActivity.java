@@ -10,9 +10,10 @@ import java.util.concurrent.TimeUnit;
 import io.reactivex.Completable;
 import io.reactivex.functions.Action;
 import kr.mashup.mapc.R;
+import kr.mashup.mapc.ui.base.BaseActivity;
 import kr.mashup.mapc.ui.main.MainActivity;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
 
     private static final long SPLASH_DELAY = 1000 * 2;
 
