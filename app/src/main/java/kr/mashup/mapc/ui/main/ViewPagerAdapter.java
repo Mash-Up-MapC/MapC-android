@@ -13,7 +13,7 @@ import kr.mashup.mapc.ui.main.realtime.RealtimeFragment;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter{
 
-    private String[] tabTitles = new String[] {"코스", "예약", "가이드", "버스", "기타"};
+    private String[] tabTitles = new String[] {"코스", "예약", "가이드", "실시간 버스", "기타"};
 
     public ViewPagerAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
