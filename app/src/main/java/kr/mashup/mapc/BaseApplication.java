@@ -7,7 +7,7 @@ import android.appwidget.AppWidgetProvider;
  * Created by jeongahri on 2018. 7. 1..
  */
 
-public class BaseActivity extends Application {
+public class BaseApplication extends Application {
 
     @Override
     public void onCreate() {
