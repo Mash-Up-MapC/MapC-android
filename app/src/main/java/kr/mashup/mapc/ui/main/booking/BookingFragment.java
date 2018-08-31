@@ -4,13 +4,19 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import kr.mashup.mapc.R;
+import kr.mashup.mapc.data.Booking;
 
 public class BookingFragment extends Fragment{
+
+    private RecyclerView recyclerView;
+    private BookingAdapter adapter;
 
     @Nullable
     @Override
@@ -21,6 +27,20 @@ public class BookingFragment extends Fragment{
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        init(view);
+    }
+
+    private void init(View view) {
+        recyclerView = view.findViewById(R.id.recycler_view_booking);
+
+        adapter = new BookingAdapter();
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(adapter);
+
+        for (int i = 0; i < 10; i++) {
+            adapter.addData(new Booking());
+        }
     }
 
     public static BookingFragment newInstance() {
