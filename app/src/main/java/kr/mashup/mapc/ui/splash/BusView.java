@@ -204,4 +204,14 @@ public class BusView extends View {
         }
     }
 
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+
+        imageBackground.recycle();
+        imageCloud.recycle();
+        imageBusTop.recycle();
+        imageBusBottom.recycle();
+        imageBusWheel.recycle();
+    }
 }
