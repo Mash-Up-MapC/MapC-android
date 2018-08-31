@@ -33,7 +33,7 @@ public class SplashActivity extends BaseActivity {
                 .subscribe(new Action() {
                     @Override
                     public void run() throws Exception {
-                        startMainActivity();
+                       // startMainActivity();
                     }
                 });
     }
