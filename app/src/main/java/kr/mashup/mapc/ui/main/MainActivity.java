@@ -1,5 +1,6 @@
 package kr.mashup.mapc.ui.main;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -15,6 +16,8 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setStatusBarColor(Color.WHITE);
+        setStatusBarLight();
         setContentView(R.layout.activity_main);
 
         final TabLayout tabLayout = findViewById(R.id.tab_layout);

@@ -1,6 +1,7 @@
 package kr.mashup.mapc.ui.splash;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -20,6 +21,8 @@ public class SplashActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setStatusBarColor(Color.WHITE);
+        setStatusBarLight();
         setContentView(R.layout.activity_splash);
 
         init();
