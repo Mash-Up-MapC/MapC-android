@@ -167,15 +167,10 @@ public class BusView extends View {
     }
 
     private void draw(Canvas canvas, Bitmap bitmap, float posX, float posY) {
-        canvas.drawBitmap(
-                bitmap,
-                new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight()),
-                new RectF(posX, posY, posX + bitmap.getWidth(), posY + bitmap.getHeight()),
-                null
-        );
+        draw(canvas, bitmap, posX, posY, 0);
     }
 
-    private void draw(Canvas canvas, Bitmap bitmap, int posX, int posY, float angle) {
+    private void draw(Canvas canvas, Bitmap bitmap, float posX, float posY, float angle) {
         Matrix drawMatrix = new Matrix();
         drawMatrix.setRotate(
                 -angle,
