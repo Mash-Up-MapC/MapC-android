@@ -1,6 +1,11 @@
 <resources>
-    <string name="app_name">MapC</string>
+    <string name="app_name">투어라운드</string>
     <string name="start_guide">가이드 시작하기</string>
     <string name="introduce_guide">서울시티투어버스 고객만을 위한\n프리미엄 가이드와 함께 서울을 즐기세요!</string>
-
+    <string name="next_station">다음 정류장</string>
+    <string name="go_to">으로 향하고 있어요</string>
+    <string name="related_history">관련역사</string>
+    <string name="attraction">관광명소</string>
+    <string name="restaurant">맛집</string>
+    <string name="enjoy">즐길거리</string>
 </resources>
