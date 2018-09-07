@@ -22,7 +22,7 @@ public class StartingGuideFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_guide, container, false);
+        view = inflater.inflate(R.layout.fragment_starting_guide, container, false);
 
         guide_start_btn = view.findViewById(R.id.guide_start_btn);
         guide_start_btn.setOnClickListener(new View.OnClickListener() {

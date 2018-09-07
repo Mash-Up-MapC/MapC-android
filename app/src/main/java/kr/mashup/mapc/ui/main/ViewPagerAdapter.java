@@ -9,10 +9,11 @@ import kr.mashup.mapc.ui.main.course.CourseFragment;
 import kr.mashup.mapc.ui.main.booking.BookingFragment;
 import kr.mashup.mapc.ui.main.guide.StartingGuideFragment;
 import kr.mashup.mapc.ui.main.etc.EtcFragment;
+import kr.mashup.mapc.ui.main.realtime.RealtimeFragment;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter{
 
-    private String[] tabTitles = new String[] {"코스", "예약", "가이드", "기타"};
+    private String[] tabTitles = new String[] {"코스", "예약", "가이드", "실시간버스", "전체"};
 
     public ViewPagerAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
@@ -34,6 +35,8 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
             case 2:
                 return StartingGuideFragment.newInstance();
             case 3:
+                return RealtimeFragment.newInstance();
+            case 4:
                 return EtcFragment.newInstance();
         }
 
@@ -42,6 +45,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public int getCount() {
-        return 4;
+        return 5;
     }
 }
