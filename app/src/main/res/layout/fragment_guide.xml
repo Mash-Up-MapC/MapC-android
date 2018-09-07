@@ -8,7 +8,7 @@
         android:id="@+id/image_slider_layout"
         android:background="@color/black"
         android:layout_width="fill_parent"
-        android:layout_height="360dp">
+        android:layout_height="240dp">
         <android.support.v4.view.ViewPager
             android:id="@+id/pager"
             android:layout_width="fill_parent"
@@ -34,7 +34,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/next_destination"
+                android:id="@+id/course_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="시청"
@@ -59,81 +59,187 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
-            android:id="@+id/info_controller_layout"
-            android:orientation="horizontal"
             android:gravity="center"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
+                android:id="@+id/info_controller_layout"
+                android:orientation="horizontal"
                 android:gravity="center"
-                android:id="@+id/history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:gravity="center"
+                    android:id="@+id/history_btn"
+                    android:orientation="vertical"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp">
+                    <ImageView
+                        android:src="@drawable/ic_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="@string/related_history"
+                        android:textColor="@color/greyish_brown"
+                        android:textSize="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center"
+                    android:id="@+id/attractions_btn"
+                    android:orientation="vertical"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp">
+                    <ImageView
+                        android:src="@drawable/ic_attractions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="@string/attraction"
+                        android:textColor="@color/greyish_brown"
+                        android:textSize="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center"
+                    android:id="@+id/restaurant_btn"
+                    android:orientation="vertical"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp">
+                    <ImageView
+                        android:src="@drawable/ic_restaurant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="@string/restaurant"
+                        android:textColor="@color/greyish_brown"
+                        android:textSize="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center"
+                    android:id="@+id/enjoy_btn"
+                    android:orientation="vertical"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp">
+                    <ImageView
+                        android:src="@drawable/ic_enjoy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="@string/enjoy"
+                        android:textColor="@color/greyish_brown"
+                        android:textSize="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:text="@string/description_example"
+                android:textColor="@color/greyish_brown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:id="@+id/history_layout"
+                android:layout_marginTop="33dp"
                 android:orientation="vertical"
-                android:layout_width="90dp"
-                android:layout_height="90dp">
-                <ImageView
-                    android:src="@drawable/ic_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:text="@string/related_history"
-                    android:textSize="10sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/ic_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="@string/related_history"
+                        android:textColor="@color/greyish_brown"
+                        android:textSize="17sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
-                android:gravity="center"
-                android:id="@+id/attractions"
+                android:id="@+id/attractions_layout"
+                android:layout_marginTop="33dp"
                 android:orientation="vertical"
-                android:layout_width="90dp"
-                android:layout_height="90dp">
-                <ImageView
-                    android:src="@drawable/ic_attractions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:text="@string/attraction"
-                    android:textSize="10sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/ic_attractions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="@string/attraction"
+                        android:textColor="@color/greyish_brown"
+                        android:textSize="17sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
-                android:gravity="center"
-                android:id="@+id/restaurant"
+                android:id="@+id/restaurant_layout"
+                android:layout_marginTop="33dp"
                 android:orientation="vertical"
-                android:layout_width="90dp"
-                android:layout_height="90dp">
-                <ImageView
-                    android:src="@drawable/ic_restaurant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:text="@string/restaurant"
-                    android:textSize="10sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/ic_restaurant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="@string/restaurant"
+                        android:textColor="@color/greyish_brown"
+                        android:textSize="17sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
-                android:gravity="center"
-                android:id="@+id/enjoy"
+                android:id="@+id/enjoy_layout"
+                android:layout_marginTop="33dp"
                 android:orientation="vertical"
-                android:layout_width="90dp"
-                android:layout_height="90dp">
-                <ImageView
-                    android:src="@drawable/ic_enjoy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:text="@string/enjoy"
-                    android:textSize="10sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/ic_enjoy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="@string/enjoy"
+                        android:textColor="@color/greyish_brown"
+                        android:textSize="17sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
     </ScrollView>
 
 </LinearLayout>
