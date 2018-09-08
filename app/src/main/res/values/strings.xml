@@ -1,4 +1,12 @@
 <resources>
-    <string name="app_name">MapC</string>
-
+    <string name="app_name">투어라운드</string>
+    <string name="start_guide">가이드 시작하기</string>
+    <string name="introduce_guide">서울시티투어버스 고객만을 위한\n프리미엄 가이드와 함께 서울을 즐기세요!</string>
+    <string name="next_station">다음 정류장</string>
+    <string name="go_to">으로 향하고 있어요</string>
+    <string name="related_history">관련역사</string>
+    <string name="attraction">관광명소</string>
+    <string name="restaurant">맛집</string>
+    <string name="enjoy">즐길거리</string>
+    <string name="description_example">"대한민국의 심장부 시청 주변은 서울은 물론 대한민국의 심장\n으로 불린다. 이곳은 줄곧 우리나라 정치, 행정의 중심이며, \n서울을 찾은 여행자들에게도 첫 번째로 꼽히는 방문지이다. \n경복궁과 덕수궁은 말할 것도 없고, 대한민국의 과거, 현재, \n미래를 보고 싶다면 이만한 곳도 없다."</string>
 </resources>
