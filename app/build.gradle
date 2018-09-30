@@ -44,4 +44,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:15.0.1'
     // animation util
     implementation 'net.jspiner.animationbuilder:animationbuilder:0.0.1'
+    //circle indicator for image slider
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+
 }

@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import kr.mashup.mapc.ui.main.course.CourseFragment;
 import kr.mashup.mapc.ui.main.booking.BookingFragment;
-import kr.mashup.mapc.ui.main.guide.GuideFragment;
+import kr.mashup.mapc.ui.main.guide.StartingGuideFragment;
 import kr.mashup.mapc.ui.main.etc.EtcFragment;
 import kr.mashup.mapc.ui.main.realtime.RealtimeFragment;
 
@@ -33,7 +33,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
             case 1:
                 return BookingFragment.newInstance();
             case 2:
-                return GuideFragment.newInstance();
+                return StartingGuideFragment.newInstance();
             case 3:
                 return RealtimeFragment.newInstance();
             case 4:

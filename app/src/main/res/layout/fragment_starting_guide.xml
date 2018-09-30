@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/relative_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <kr.mashup.mapc.ui.splash.BusView
+            android:id="@+id/bus_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_alignBottom="@+id/bus_view"
+            android:layout_marginStart="26dp"
+            android:layout_marginBottom="94dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/introduce_guide"
+            android:textSize="13sp"
+            android:textColor="@color/greyish_brown" />
+        <TextView
+            android:layout_alignBottom="@+id/bus_view"
+            android:layout_marginStart="26dp"
+            android:layout_marginBottom="56dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Audio Guide"
+            android:textSize="24sp"
+            android:textColor="@color/cocoa" />
+        <Button
+            android:id="@+id/guide_start_btn"
+            android:layout_alignBottom="@+id/bus_view"
+            android:text="@string/start_guide"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:background="@color/salmon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+</RelativeLayout>
