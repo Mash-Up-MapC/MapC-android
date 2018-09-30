@@ -1,5 +1,9 @@
-## MapC-android
+## 2018년 서울시 앱 공모전 출품작(투어라운드)
 [![Build Status](https://travis-ci.org/Mash-Up-MapC/MapC-android.svg?branch=develop)](https://travis-ci.org/Mash-Up-MapC/MapC-android)
+#### 작품명 : 투어라운드 (Touround)
+#### 팀명 : mapC
+#### 대표명 : 강하선
+#### 작품 주제 : 서울시티투어버스 사용자의 풍부한 서울 관광을 위한 가이드 앱
 
 
 ## PR 규칙
